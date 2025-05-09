@@ -7,12 +7,12 @@ import os
 app = Flask(__name__)
 
 # Ganti dengan Channel access token Anda
-YOUR_CHANNEL_ACCESS_TOKEN = os.environ.get('wnpXRw4OFuXa7VJwZj9ABq7uTPpSXnN2Om8cfu8mtbQUTYWTKI7sTfNL9es722d5g+lmq9oTjEqwSrtPKw/Qi/ZTZPibfGmQdw2gPRu+UpuH//8FqLRAb+s1MWePl3Zxwl91hVNUFRrTwjsomNNbQwdB04t89/1O/w1cDnyilFU=')
-if not YOUR_CHANNEL_ACCESS_TOKEN:
+wnpXRw4OFuXa7VJwZj9ABq7uTPpSXnN2Om8cfu8mtbQUTYWTKI7sTfNL9es722d5g+lmq9oTjEqwSrtPKw/Qi/ZTZPibfGmQdw2gPRu+UpuH//8FqLRAb+s1MWePl3Zxwl91hVNUFRrTwjsomNNbQwdB04t89/1O/w1cDnyilFU= = os.environ.get('LINE_CHANNEL_ACCESS_TOKEN')
+if not wnpXRw4OFuXa7VJwZj9ABq7uTPpSXnN2Om8cfu8mtbQUTYWTKI7sTfNL9es722d5g+lmq9oTjEqwSrtPKw/Qi/ZTZPibfGmQdw2gPRu+UpuH//8FqLRAb+s1MWePl3Zxwl91hVNUFRrTwjsomNNbQwdB04t89/1O/w1cDnyilFU=:
     print("Error: LINE_CHANNEL_ACCESS_TOKEN tidak ditemukan di environment variable.")
     exit()
 
-line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
+line_bot_api = LineBotApi(wnpXRw4OFuXa7VJwZj9ABq7uTPpSXnN2Om8cfu8mtbQUTYWTKI7sTfNL9es722d5g+lmq9oTjEqwSrtPKw/Qi/ZTZPibfGmQdw2gPRu+UpuH//8FqLRAb+s1MWePl3Zxwl91hVNUFRrTwjsomNNbQwdB04t89/1O/w1cDnyilFU=)
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -34,12 +34,12 @@ from linebot.exceptions import InvalidSignatureError
 from linebot import WebhookHandler
 
 # Ganti dengan Channel secret Anda
-YOUR_CHANNEL_SECRET = os.environ.get('89d7ff71173f8f8db68da3a9d4ea20a2')
-if not YOUR_CHANNEL_SECRET:
+89d7ff71173f8f8db68da3a9d4ea20a2 = os.environ.get('LINE_CHANNEL_SECRET')
+if not 89d7ff71173f8f8db68da3a9d4ea20a2:
     print("Error: LINE_CHANNEL_SECRET tidak ditemukan di environment variable.")
     exit()
 
-handler = WebhookHandler(YOUR_CHANNEL_SECRET)
+handler = WebhookHandler(89d7ff71173f8f8db68da3a9d4ea20a2)
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def handle_message(event):
